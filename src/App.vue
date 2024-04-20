@@ -1,16 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HomePage :person="person" :count="count" @plus="handlePlus" @minus="handleMinus"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './pages/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HomePage
+  },
+  data() {
+    return {
+      count: 0,
+      person: {
+        fullname: "John Doe",
+        country: "Spain",
+        age: 17
+      }
+    };
+  },
+  methods: {
+    handlePlus() {
+      this.count++;
+    },
+    handleMinus() {
+      this.count--;
+    },
+  },
 }
 </script>
 
