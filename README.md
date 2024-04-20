@@ -1,24 +1,23 @@
-# progra-web-2-entrega-2-vue
+Diferencias entre ref y reactive en Vue 3:
 
-## Project setup
-```
-npm install
-```
+1. Naturaleza de los datos:
+   - ref: Se utiliza para crear una referencia reactiva a un valor simple, como un número, una cadena o un booleano.
+   - reactive: Se utiliza para crear un objeto reactivamente, lo que significa que todos sus atributos son reactivos.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+2. Acceso a los datos:
+   - ref: Los datos almacenados en una referencia (`ref`) se acceden utilizando la propiedad `value`.
+   - reactive: Los datos almacenados en un objeto reactivo (`reactive`) se acceden directamente como propiedades del objeto.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+3. Actualización de datos:
+   - ref: Para actualizar los datos en una referencia (`ref`), se asigna un nuevo valor a su propiedad `value`.
+   - reactive: Los datos en un objeto reactivo (`reactive`) se actualizan directamente modificando sus propiedades.
 
-### Lints and fixes files
-```
-npm run lint
-```
+4. Detección de cambios:
+   - ref: Los cambios en una referencia (`ref`) se detectan utilizando `watch` con la opción `deep: true`.
+   - reactive: Los cambios en un objeto reactivo (`reactive`) se detectan automáticamente y no requieren configuración adicional.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+5. Uso en plantillas:
+   - ref: En las plantillas, se accede a los datos de una referencia utilizando la propiedad `value`.
+   - reactive: En las plantillas, se accede a los datos de un objeto reactivo directamente como propiedades del objeto.
+
+Estas son algunas de las diferencias fundamentales entre `ref` y `reactive` en Vue 3. Dependiendo del caso de uso, se puede elegir entre una u otra función para mantener el estado de la aplicación de manera eficiente.
